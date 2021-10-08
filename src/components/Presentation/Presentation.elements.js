@@ -31,6 +31,7 @@ export const VideoBg = styled.video`
 export const PresentationContent = styled.div`
 	position: relative;
 	height: 100%;
+	width: 100%;
 	top: 0px;
 	padding-left: 70px;
 	padding-right: 1rem;
@@ -51,6 +52,7 @@ export const PresentationContent = styled.div`
 	}
 `;
 export const PresentationHeader = styled.h1`
+	text-align: center;
 	font-size: 48px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
@@ -66,6 +68,7 @@ export const PresentationP = styled.p`
 	margin-top: 24px;
 	color: #fff;
 	font-size: 24px;
+	text-align: center;
 
 	@media screen and (max-width: 480px) {
 		font-size: 18px;

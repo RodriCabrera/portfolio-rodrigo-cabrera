@@ -15,3 +15,4 @@ export const ContactContainer = styled.div`
 		padding-left: 30px;
 	}
 `;
+export const ContactHeader = styled.h2``;
