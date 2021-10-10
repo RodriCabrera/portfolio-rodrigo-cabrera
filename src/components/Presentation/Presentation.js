@@ -14,9 +14,7 @@ const Presentation = () => {
 	const contents = useData("presentation");
 	const [video, setVideo] = useState();
 	useEffect(() => {
-		const client = createClient(
-			"563492ad6f917000010000018691fc1abc374881b7f2f1ee18081b4a"
-		);
+		const client = createClient(process.env.REACT_APP_PEXELS_APIKEY);
 		client.videos
 			.show({ id: 1730393 })
 			.then((video) => setVideo(video.video_files[5].link))

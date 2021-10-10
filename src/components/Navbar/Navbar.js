@@ -23,7 +23,9 @@ const Navbar = ({ toggle }) => {
 		<>
 			<Nav>
 				<NavbarContainer>
-					<NavLogo onClick={toggleHome}>Rodrigo Cabrera</NavLogo>
+					<NavLogo to="#" onClick={toggleHome}>
+						Rodrigo Cabrera
+					</NavLogo>
 					<MobileIcon onClick={toggle}>
 						<FaBars />
 					</MobileIcon>

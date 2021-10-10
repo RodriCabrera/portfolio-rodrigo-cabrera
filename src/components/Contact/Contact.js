@@ -18,7 +18,7 @@ const Contact = () => {
 	const [loading, setLoading] = useState(false);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
-
+	console.log(loading, name, email);
 	const handleSubmit = (e) => {
 		setLoading(true);
 		e.preventDefault();
