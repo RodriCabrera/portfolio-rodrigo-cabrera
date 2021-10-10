@@ -10,7 +10,7 @@ import {
 	AboutImageWrapper,
 	AboutImage,
 } from "./About.elements";
-import profilePic from "../../assets/profile-photo.jpg";
+import photo from "../../assets/img.JPG";
 
 const About = () => {
 	return (
@@ -45,7 +45,7 @@ const About = () => {
 				<AboutSkillsWrappaer></AboutSkillsWrappaer>
 			</AboutInfo>
 			<AboutImageWrapper>
-				<AboutImage src={profilePic} />
+				<AboutImage src={photo} />
 			</AboutImageWrapper>
 		</AboutContainer>
 	);

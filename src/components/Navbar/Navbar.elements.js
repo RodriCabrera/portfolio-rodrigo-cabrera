@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.4);
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 	height: 80px;
 	width: 100%;

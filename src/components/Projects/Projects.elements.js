@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-	background-color: #cccccc;
+	background-color: #dce1de;
+	min-height: 100vh;
 	padding: 100px;
 	display: flex;
 	flex-direction: column;
@@ -46,6 +47,6 @@ export const ProjectsGrid = styled.div`
 `;
 export const ProjectCard = styled.div`
 	padding: 1rem;
-	background-color: lightgreen;
+	background-color: #49a078;
 	border-radius: 10%;
 `;

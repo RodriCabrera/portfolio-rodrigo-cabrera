@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
 	padding: 5rem 3rem;
 	height: 100vh;
-	background: #0c0c0c;
+	background: #1f2421;
+	display: flex;
 `;
 export const AboutInfo = styled.div``;
 export const AboutHeader = styled.h2`
@@ -23,6 +24,15 @@ export const AboutParagraph = styled.div`
 	margin-bottom: 1rem;
 	font-weight: 300;
 `;
-export const AboutImageWrapper = styled.div``;
 export const AboutSkillsWrappaer = styled.div``;
-export const AboutImage = styled.img``;
+export const AboutImageWrapper = styled.div`
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 100%;
+	background-image: url("../../assets/img.JPG");
+`;
+export const AboutImage = styled.img`
+	height: 100%;
+	width: auto;
+`;
