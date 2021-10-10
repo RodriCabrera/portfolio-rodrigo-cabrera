@@ -47,6 +47,6 @@ export const ProjectsGrid = styled.div`
 `;
 export const ProjectCard = styled.div`
 	padding: 1rem;
-	background-color: #49a078;
-	border-radius: 10%;
+	border: 1px solid black;
+	border-radius: 5px;
 `;
