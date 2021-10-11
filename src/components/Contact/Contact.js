@@ -11,6 +11,7 @@ import {
 	CNotification,
 } from "./Contact.elements";
 import emailjs from "emailjs-com";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
 	const form = useRef();
@@ -82,6 +83,7 @@ const Contact = () => {
 					true:false  --> enviado *  btn activo+form vacio / con notif. */}
 				</CForm>
 			</CWrapper>
+			<Footer />
 		</ContactContainer>
 	);
 };

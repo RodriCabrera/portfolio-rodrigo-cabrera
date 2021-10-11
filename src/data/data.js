@@ -8,8 +8,8 @@ export const data = {
 	presentation: {
 		lang: {
 			en: {
-				header: "Hi! I'm Rodrigo Cabrera",
-				presentation: "I'm a frontend developer from Buenos Aires, Argentina.",
+				header: "i'm Rodrigo Cabrera",
+				presentation: "FRONTEND developer from buenos Aires, Argentina.",
 			},
 			sp: {
 				header: "Hola! Soy Rodrigo Cabrera",

@@ -13,6 +13,9 @@ const Projects = () => {
 			<ProjectsGrid>
 				<ProjectCard>Art Latin America</ProjectCard>{" "}
 				<ProjectCard>Ola Estudio</ProjectCard>
+				<ProjectCard>Project Card</ProjectCard>{" "}
+				<ProjectCard>Project Card</ProjectCard>
+				<ProjectCard>Project Card</ProjectCard>
 				<ProjectCard>Project Card</ProjectCard>
 			</ProjectsGrid>
 		</ProjectsContainer>

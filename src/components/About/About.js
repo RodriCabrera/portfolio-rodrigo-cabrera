@@ -20,20 +20,21 @@ const About = () => {
 			<AboutInner>
 				<AboutTextContainer>
 					<AboutText>
-						Hello! My name es Rodrigo, I'm from Buenos Aires and I'm glad you're
-						here! I finished Coderhouse's Frontend bootcamp and I'm currently
-						studying backend development (Node JS) and QA Testing.
+						Hello! I'm glad you're here! My name is Rodrigo, I'm a freelance
+						frontend developer based in Buenos Aires. I finished Coderhouse's
+						Frontend bootcamp and I'm currently studying backend development
+						(Node JS) and QA Testing.
 					</AboutText>
 					<AboutText>
-						I'm also a yoga instructor and I'm halfway from finishing writing my
-						psychology degree thesis about meditation and gestalt therapy.
+						Apart from coding, I'm a yoga instructor and I'm halfway from
+						finishing my psychology degree thesis about meditation and gestalt
+						therapy.
 					</AboutText>
 					<AboutText>
-						To briefly describe myself I'd say that I'm constantly looking to
-						face new challenges and learn from the process. I'm goal oriented
-						and a calm person regardless of high pressure environments.
-						Detail-oriented, analytic and responsible. Curious by nature and
-						emotionally intelligent team player.
+						I'm currently looking to face new challenges and learn from the
+						process. I'm goal oriented and a calm person regardless of high
+						pressure environments. Curious by nature and emotionally intelligent
+						team player.
 					</AboutText>
 					<AboutText>
 						These are the main thechnologies I'm working with:

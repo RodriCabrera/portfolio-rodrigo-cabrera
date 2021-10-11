@@ -15,6 +15,7 @@ export const AboutHeader = styled.h2`
 	color: white;
 	margin-bottom: 1rem;
 	font-size: 2rem;
+	font-family: "Major Mono Display", monospace;
 `;
 export const AboutText = styled.p`
 	color: white;
@@ -25,8 +26,11 @@ export const AboutText = styled.p`
 
 export const AboutTextContainer = styled.div``;
 export const AboutSkillsWrappaer = styled.div``;
-export const AboutImageWrapper = styled.div``;
+export const AboutImageWrapper = styled.div`
+	height: 100%;
+`;
 export const AboutImage = styled.img``;
+
 export const SkillsList = styled.ul`
 	color: white;
 	padding-left: 20px;

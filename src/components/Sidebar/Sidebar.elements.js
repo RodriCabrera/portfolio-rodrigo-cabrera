@@ -4,14 +4,16 @@ import { Link as LinkS } from "react-scroll";
 
 export const SidebarContainer = styled.aside`
 	position: fixed;
-	z-index: 999;
+	z-index: 20;
 	width: 100%;
 	height: 100%;
-	background: #0d0d0d;
+	background: #0d0d0d60;
 	display: grid;
 	align-items: center;
 	left: 0;
 	top: 0;
+	backdrop-filter: blur(8px);
+
 	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 	opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
 	transition: 0.3s ease-in-out;
@@ -48,7 +50,6 @@ export const SidebarLink = styled(LinkS)`
 	transition: 0.2s ease-in-out;
 	color: #fff;
 	cursor: pointer;
-
 	&:hover {
 		color: #01bf71;
 		transition: ease-in-out.2s;

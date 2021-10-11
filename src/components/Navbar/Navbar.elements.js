@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 	font-size: 1rem;
 	position: fixed;
 	top: 0;
-	z-index: 10;
+	z-index: 999;
 	backdrop-filter: blur(8px);
 
 	@media screen and (max-width: 960px) {
@@ -30,9 +30,11 @@ export const NavbarContainer = styled.div`
 `;
 export const NavLogo = styled(LinkS)`
 	color: #fff;
+	font-family: "Major Mono Display", monospace;
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 1.5rem;
+	letter-spacing: 2px;
 	display: flex;
 	align-items: center;
 	margin-left: 24px;

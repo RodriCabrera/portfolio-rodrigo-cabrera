@@ -1,10 +1,20 @@
 .container {
 	margin-left: 4rem;
+	margin-right: 2rem;
 	display: flex;
 	width: 50px;
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
+}
+@media screen and (max-width: 768px) {
+	.container {
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+	}
+	.btn-container {
+		margin-left: 1rem;
+	}
 }
 .btn-container {
 	box-sizing: content-box;

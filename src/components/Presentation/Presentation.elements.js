@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const PresentationContainer = styled.div`
 	background: #0c0c0c;
@@ -21,13 +21,27 @@ export const PresentationBg = styled.div`
 	height: 100%;
 	overflow: hidden;
 `;
+const caleido = keyframes`
+  from {
+	filter: hue-rotate(0deg);
+  }
+
+  to {
+	filter: hue-rotate(360deg);
+  }
+`;
+
 export const VideoBg = styled.video`
 	width: 100%;
 	height: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: #232a34;
+	/* filter: hue-rotate(0deg) ; */
+	transition: all 5s;
+	animation: ${caleido} 10s linear infinite;
 `;
+
 export const PresentationContent = styled.div`
 	position: relative;
 	height: 100%;
@@ -53,6 +67,7 @@ export const PresentationContent = styled.div`
 `;
 export const PresentationHeader = styled.h1`
 	text-align: center;
+	font-family: "Major Mono Display", monospace;
 	font-size: 48px;
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2),
@@ -69,6 +84,7 @@ export const PresentationP = styled.p`
 	color: #fff;
 	font-size: 24px;
 	text-align: center;
+	font-family: "Major Mono Display", monospace;
 
 	@media screen and (max-width: 480px) {
 		font-size: 18px;
