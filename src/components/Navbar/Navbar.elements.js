@@ -40,6 +40,13 @@ export const NavLogo = styled(LinkS)`
 	margin-left: 24px;
 	font-weight: bold;
 	text-decoration: none;
+	@media screen and (max-width: 768px) {
+		font-size: 1rem;
+	}
+	@media screen and (max-width: 450px) {
+		font-size: 0.8rem;
+		width: 150px;
+	}
 `;
 
 export const MobileIcon = styled.div`

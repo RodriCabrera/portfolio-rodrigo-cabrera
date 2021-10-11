@@ -4,7 +4,6 @@ import Presentation from "./components/Presentation/Presentation";
 import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
-import Sidebar from "./components/Sidebar/Sidebar";
 import { LanguageProvider } from "./context/LanguageContext";
 import About from "./components/About/About";
 
@@ -15,8 +14,7 @@ function App() {
 	};
 	return (
 		<LanguageProvider>
-			<Sidebar toggle={toggle} isOpen={isOpen} />
-			<Navbar toggle={toggle} />
+			<Navbar toggle={toggle} isOpen={isOpen} />
 			<Presentation />
 			<About />
 			<Projects />

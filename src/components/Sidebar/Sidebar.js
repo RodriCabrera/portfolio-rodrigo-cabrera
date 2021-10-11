@@ -3,8 +3,6 @@ import useData from "../../hooks/useData";
 import LangSwitch from "../LangSwitch/LangSwitch";
 import {
 	SidebarContainer,
-	Icon,
-	CloseIcon,
 	SidebarWrapper,
 	SidebarMenu,
 	SidebarLink,
@@ -14,10 +12,6 @@ const Sidebar = ({ isOpen, toggle }) => {
 	const contents = useData("navbar");
 	return (
 		<SidebarContainer isOpen={isOpen} onClick={toggle}>
-			<Icon onClick={toggle}>
-				<CloseIcon />
-			</Icon>
-
 			<SidebarWrapper>
 				<SidebarMenu>
 					<SidebarLink

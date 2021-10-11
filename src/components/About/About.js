@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
 	AboutContainer,
 	AboutHeader,
@@ -12,33 +12,23 @@ import {
 	Skill,
 } from "./About.elements";
 import photo from "../../assets/photo.png";
+import useData from "../../hooks/useData";
 
 const About = () => {
+	const data = useData("about");
+	const [aboutData, setAboutData] = useState("");
+	useEffect(() => {
+		setAboutData(data);
+	}, [data]);
 	return (
 		<AboutContainer id="about">
-			<AboutHeader>About me</AboutHeader>
+			<AboutHeader>{aboutData.header}</AboutHeader>
 			<AboutInner>
 				<AboutTextContainer>
-					<AboutText>
-						Hello! I'm glad you're here! My name is Rodrigo, I'm a freelance
-						frontend developer based in Buenos Aires. I finished Coderhouse's
-						Frontend bootcamp and I'm currently studying backend development
-						(Node JS) and QA Testing.
-					</AboutText>
-					<AboutText>
-						Apart from coding, I'm a yoga instructor and I'm halfway from
-						finishing my psychology degree thesis about meditation and gestalt
-						therapy.
-					</AboutText>
-					<AboutText>
-						I'm currently looking to face new challenges and learn from the
-						process. I'm goal oriented and a calm person regardless of high
-						pressure environments. Curious by nature and emotionally intelligent
-						team player.
-					</AboutText>
-					<AboutText>
-						These are the main thechnologies I'm working with:
-					</AboutText>
+					<AboutText>{aboutData.hi}</AboutText>
+					<AboutText>{aboutData.psico}</AboutText>
+					<AboutText>{aboutData.desc}</AboutText>
+					<AboutText>{aboutData.stack} </AboutText>
 					<SkillsList>
 						<Skill>React JS</Skill>
 						<Skill>Styled Components</Skill>

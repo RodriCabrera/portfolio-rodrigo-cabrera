@@ -8,12 +8,13 @@ import {
 	NavItem,
 	NavLinks,
 } from "./Navbar.elements";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import LangSwitch from "../LangSwitch/LangSwitch";
 import useData from "../../hooks/useData";
+import Sidebar from "../Sidebar/Sidebar";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, isOpen }) => {
 	const toggleHome = () => {
 		scroll.scrollToTop();
 	};
@@ -24,10 +25,10 @@ const Navbar = ({ toggle }) => {
 			<Nav>
 				<NavbarContainer>
 					<NavLogo to="#" onClick={toggleHome}>
-						Rodrigo Cabrera
+						RodriGo CabrerA
 					</NavLogo>
 					<MobileIcon onClick={toggle}>
-						<FaBars />
+						{isOpen ? <FaTimes /> : <FaBars />}
 					</MobileIcon>
 					<NavMenu>
 						<NavItem>
@@ -67,6 +68,7 @@ const Navbar = ({ toggle }) => {
 					</NavMenu>
 				</NavbarContainer>
 			</Nav>
+			<Sidebar toggle={toggle} isOpen={isOpen} />
 		</>
 	);
 };
