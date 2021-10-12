@@ -27,16 +27,16 @@ const Projects = () => {
 			: setProjectsData(data.projects.lang.sp);
 	}, [language]);
 
-	const cardContents = (projectName) => {
-		return (
-			projectsData && (
-				<>
-					<CardTitle>{projectsData.cards.projectName.title}</CardTitle>
-					<CardDesc>{projectsData.cards.projectName.description}</CardDesc>
-				</>
-			)
-		);
-	};
+	// const cardContents = (projectName) => {
+	// 	return (
+	// 		projectsData && (
+	// 			<>
+	// 				<CardTitle>{projectsData.cards.projectName.title}</CardTitle>
+	// 				<CardDesc>{projectsData.cards.projectName.description}</CardDesc>
+	// 			</>
+	// 		)
+	// 	);
+	// };
 
 	console.log(projectsData);
 
@@ -50,6 +50,8 @@ const Projects = () => {
 						{/* {cardContents()} */}
 						{/* <CardTitle>{projectsData.cards.olaestudio.title}</CardTitle> */}
 						{/* <CardDesc>{projectsData.cards.olaestudio.description}</CardDesc> */}
+						<CardTitle>ola estudio</CardTitle>
+
 						<CardIcons>
 							<StyledLink
 								href="https://olaestudio.vercel.app/"
@@ -75,6 +77,8 @@ const Projects = () => {
 						}
 					/>
 					<CardInfo>
+						<CardTitle>arT latin ameRica</CardTitle>
+
 						{/* <CardTitle>{projectsData.cards.artlatinamerica.title}</CardTitle> */}
 						<CardDesc>
 							{/* {projectsData.cards.artlatinamerica.description} */}
