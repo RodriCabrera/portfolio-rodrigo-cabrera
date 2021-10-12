@@ -14,6 +14,7 @@ export const LanguageProvider = ({ children }) => {
 		</LanguageContext.Provider>
 	);
 };
+
 export const useLanguage = () => {
 	const context = React.useContext(LanguageContext);
 	if (!context) {

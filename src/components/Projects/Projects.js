@@ -14,16 +14,32 @@ import {
 	StyledLink,
 } from "./Projects.elements";
 import olaestudio from "../../assets/olaestudio-min-square.jpg";
-import useData from "../../hooks/useData";
+import { useLanguage } from "../../context/LanguageContext";
+import { data } from "../../data/data";
 
 const Projects = () => {
-	const data = useData("projects");
 	const [projectsData, setProjectsData] = useState({});
+	const { language } = useLanguage();
 
 	useEffect(() => {
-		setProjectsData(data);
-	}, [data]);
+		language === "en"
+			? setProjectsData(data.projects.lang.en)
+			: setProjectsData(data.projects.lang.sp);
+	}, [language]);
+
+	const cardContents = (projectName) => {
+		return (
+			projectsData && (
+				<>
+					<CardTitle>{projectsData.cards.projectName.title}</CardTitle>
+					<CardDesc>{projectsData.cards.projectName.description}</CardDesc>
+				</>
+			)
+		);
+	};
+
 	console.log(projectsData);
+
 	return (
 		<ProjectsContainer id="projects">
 			<ProjectsHeader>{projectsData.header}</ProjectsHeader>
@@ -31,8 +47,9 @@ const Projects = () => {
 				<ProjectCard>
 					<CardBg src={olaestudio} />
 					<CardInfo>
-						<CardTitle>{projectsData.cards.olaestudio.title}</CardTitle>
-						<CardDesc>{projectsData.cards.olaestudio.description}</CardDesc>
+						{/* {cardContents()} */}
+						{/* <CardTitle>{projectsData.cards.olaestudio.title}</CardTitle> */}
+						{/* <CardDesc>{projectsData.cards.olaestudio.description}</CardDesc> */}
 						<CardIcons>
 							<StyledLink
 								href="https://olaestudio.vercel.app/"
@@ -58,9 +75,9 @@ const Projects = () => {
 						}
 					/>
 					<CardInfo>
-						<CardTitle>{projectsData.cards.artlatinamerica.title}</CardTitle>
+						{/* <CardTitle>{projectsData.cards.artlatinamerica.title}</CardTitle> */}
 						<CardDesc>
-							{projectsData.cards.artlatinamerica.description}
+							{/* {projectsData.cards.artlatinamerica.description} */}
 						</CardDesc>
 						<CardIcons>
 							<StyledLink
