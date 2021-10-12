@@ -11,9 +11,9 @@ const Projects = () => {
 		<ProjectsContainer id="projects">
 			<ProjectsHeader>Projects</ProjectsHeader>
 			<ProjectsGrid>
-				<ProjectCard>Art Latin America</ProjectCard>{" "}
+				<ProjectCard>Art Latin America</ProjectCard>
 				<ProjectCard>Ola Estudio</ProjectCard>
-				<ProjectCard>Project Card</ProjectCard>{" "}
+				<ProjectCard>Project Card</ProjectCard>
 				<ProjectCard>Project Card</ProjectCard>
 				<ProjectCard>Project Card</ProjectCard>
 				<ProjectCard>Project Card</ProjectCard>

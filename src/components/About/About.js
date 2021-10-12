@@ -10,6 +10,7 @@ import {
 	AboutImage,
 	SkillsList,
 	Skill,
+	AboutWrapper,
 } from "./About.elements";
 import photo from "../../assets/photo.png";
 import useData from "../../hooks/useData";
@@ -22,26 +23,28 @@ const About = () => {
 	}, [data]);
 	return (
 		<AboutContainer id="about">
-			<AboutHeader>{aboutData.header}</AboutHeader>
-			<AboutInner>
-				<AboutTextContainer>
-					<AboutText>{aboutData.hi}</AboutText>
-					<AboutText>{aboutData.psico}</AboutText>
-					<AboutText>{aboutData.desc}</AboutText>
-					<AboutText>{aboutData.stack} </AboutText>
-					<SkillsList>
-						<Skill>React JS</Skill>
-						<Skill>Styled Components</Skill>
-						<Skill>CSS</Skill>
-						<Skill>Git</Skill>
-						<Skill>Firebase</Skill>
-					</SkillsList>
-				</AboutTextContainer>
-				<AboutImageWrapper>
-					<AboutImage src={photo} />
-				</AboutImageWrapper>
-			</AboutInner>
-			<AboutSkillsWrappaer></AboutSkillsWrappaer>
+			<AboutWrapper>
+				<AboutHeader>{aboutData.header}</AboutHeader>
+				<AboutInner>
+					<AboutTextContainer>
+						<AboutText>{aboutData.hi}</AboutText>
+						<AboutText>{aboutData.psico}</AboutText>
+						<AboutText>{aboutData.desc}</AboutText>
+						<AboutText>{aboutData.stack} </AboutText>
+						<SkillsList>
+							<Skill>React JS</Skill>
+							<Skill>Styled Components</Skill>
+							<Skill>CSS</Skill>
+							<Skill>Git</Skill>
+							<Skill>Firebase</Skill>
+						</SkillsList>
+					</AboutTextContainer>
+					<AboutImageWrapper>
+						<AboutImage src={photo} />
+					</AboutImageWrapper>
+				</AboutInner>
+				<AboutSkillsWrappaer></AboutSkillsWrappaer>
+			</AboutWrapper>
 		</AboutContainer>
 	);
 };

@@ -41,6 +41,11 @@ export const ProjectsGrid = styled.div`
 `;
 export const ProjectCard = styled.div`
 	padding: 1rem;
+	font-family: "Major Mono Display", monospace;
 	border: 1px solid black;
 	border-radius: 5px;
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	&:hover {
+		background: darkgrey;
+	}
 `;
