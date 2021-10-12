@@ -8,10 +8,8 @@ import {
 	PresentationP,
 } from "./Presentation.elements";
 import { createClient } from "pexels";
-import useData from "../../hooks/useData";
 
 const Presentation = () => {
-	const contents = useData("presentation");
 	const [video, setVideo] = useState();
 	useEffect(() => {
 		const client = createClient(process.env.REACT_APP_PEXELS_APIKEY);
@@ -26,8 +24,10 @@ const Presentation = () => {
 			<PresentationBg>
 				<VideoBg autoPlay loop muted src={video} type="video/mp4" />
 				<PresentationContent>
-					<PresentationHeader>{contents.header}</PresentationHeader>
-					<PresentationP>{contents.presentation}</PresentationP>
+					<PresentationHeader>i'm RodriGo Cabrera</PresentationHeader>
+					<PresentationP>
+						FRONTEND developer from buenos Aires, Argentina.
+					</PresentationP>
 				</PresentationContent>
 			</PresentationBg>
 		</PresentationContainer>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
 	ProjectCard,
 	ProjectsContainer,
@@ -14,44 +14,17 @@ import {
 	StyledLink,
 } from "./Projects.elements";
 import olaestudio from "../../assets/olaestudio-min-square.jpg";
-import { useLanguage } from "../../context/LanguageContext";
-import { data } from "../../data/data";
 
 const Projects = () => {
-	const [projectsData, setProjectsData] = useState({});
-	const { language } = useLanguage();
-
-	useEffect(() => {
-		language === "en"
-			? setProjectsData(data.projects.lang.en)
-			: setProjectsData(data.projects.lang.sp);
-	}, [language]);
-
-	// const cardContents = (projectName) => {
-	// 	return (
-	// 		projectsData && (
-	// 			<>
-	// 				<CardTitle>{projectsData.cards.projectName.title}</CardTitle>
-	// 				<CardDesc>{projectsData.cards.projectName.description}</CardDesc>
-	// 			</>
-	// 		)
-	// 	);
-	// };
-
-	console.log(projectsData);
-
 	return (
 		<ProjectsContainer id="projects">
-			<ProjectsHeader>{projectsData.header}</ProjectsHeader>
+			<ProjectsHeader>proJects</ProjectsHeader>
 			<ProjectsGrid>
 				<ProjectCard>
 					<CardBg src={olaestudio} />
 					<CardInfo>
-						{/* {cardContents()} */}
-						{/* <CardTitle>{projectsData.cards.olaestudio.title}</CardTitle> */}
-						{/* <CardDesc>{projectsData.cards.olaestudio.description}</CardDesc> */}
-						<CardTitle>ola estudio</CardTitle>
-
+						<CardTitle>oLa STUdIo</CardTitle>
+						<CardDesc>Website of a sound studio.</CardDesc>
 						<CardIcons>
 							<StyledLink
 								href="https://olaestudio.vercel.app/"
@@ -77,12 +50,8 @@ const Projects = () => {
 						}
 					/>
 					<CardInfo>
-						<CardTitle>arT latin ameRica</CardTitle>
-
-						{/* <CardTitle>{projectsData.cards.artlatinamerica.title}</CardTitle> */}
-						<CardDesc>
-							{/* {projectsData.cards.artlatinamerica.description} */}
-						</CardDesc>
+						<CardTitle>ArT LaTin aMeRica</CardTitle>
+						<CardDesc>Prototype of an online art gallery.</CardDesc>
 						<CardIcons>
 							<StyledLink
 								href="https://artlatinamerica.vercel.app/"
@@ -93,6 +62,63 @@ const Projects = () => {
 							</StyledLink>
 							<StyledLink
 								href="https://github.com/RodriCabrera/gallery"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<GithubLink />
+							</StyledLink>
+						</CardIcons>
+					</CardInfo>
+				</ProjectCard>
+				<ProjectCard>
+					<CardBg
+						src={
+							"https://www.cultura.gob.ar/media/uploads/espantapajaros-girondo-ok.jpg"
+						}
+					/>
+					<CardInfo>
+						<CardTitle>EspantaPajarOS 10</CardTitle>
+						<CardDesc>
+							Web App version of the first 10 poems of Girondo's
+							"Espantapájaros"
+						</CardDesc>
+						<CardIcons>
+							<StyledLink
+								href="https://espantapajaros.vercel.app/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<VercelLink />
+							</StyledLink>
+							<StyledLink
+								href="https://github.com/RodriCabrera/espantapajaros"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<GithubLink />
+							</StyledLink>
+						</CardIcons>
+					</CardInfo>
+				</ProjectCard>
+				<ProjectCard>
+					<CardBg
+						src={
+							"https://www.bellasartes.gob.ar/media/uploads/coleccion/7182.jpg"
+						}
+					/>
+					<CardInfo>
+						<CardTitle>Project 4</CardTitle>
+						<CardDesc>Insert Project 3 Info.</CardDesc>
+						<CardIcons>
+							<StyledLink
+								href="https://artlatinamerica.vercel.app/sdsdsd"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<VercelLink />
+							</StyledLink>
+							<StyledLink
+								href="https://github.com/RodriCabrera/"
 								target="_blank"
 								rel="noreferrer"
 							>

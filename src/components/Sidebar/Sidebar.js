@@ -1,6 +1,4 @@
 import React from "react";
-import useData from "../../hooks/useData";
-import LangSwitch from "../LangSwitch/LangSwitch";
 import {
 	SidebarContainer,
 	SidebarWrapper,
@@ -9,7 +7,6 @@ import {
 } from "./Sidebar.elements";
 
 const Sidebar = ({ isOpen, toggle }) => {
-	const contents = useData("navbar");
 	return (
 		<SidebarContainer isOpen={isOpen} onClick={toggle}>
 			<SidebarWrapper>
@@ -22,7 +19,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 						spy={true}
 						exact="true"
 					>
-						{contents[0]}
+						About
 					</SidebarLink>
 					<SidebarLink
 						onClick={toggle}
@@ -32,7 +29,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 						spy={true}
 						exact="true"
 					>
-						{contents[1]}
+						Projects
 					</SidebarLink>
 					<SidebarLink
 						onClick={toggle}
@@ -42,9 +39,8 @@ const Sidebar = ({ isOpen, toggle }) => {
 						spy={true}
 						exact="true"
 					>
-						{contents[2]}
+						Contact
 					</SidebarLink>
-					<LangSwitch />
 				</SidebarMenu>
 			</SidebarWrapper>
 		</SidebarContainer>

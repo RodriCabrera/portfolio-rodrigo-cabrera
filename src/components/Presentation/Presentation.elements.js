@@ -1,24 +1,25 @@
 import styled, { keyframes } from "styled-components";
 
 export const PresentationContainer = styled.div`
+	position: relative;
+	z-index: 1;
+	height: 100vh;
+	width: 100%;
 	background: #0c0c0c;
+	padding: 0 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 30px;
-	height: 100vh;
-	position: relative;
-	z-index: 1;
 `;
 
 export const PresentationBg = styled.div`
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	overflow: hidden;
 `;
 const caleido = keyframes`
@@ -37,7 +38,6 @@ export const VideoBg = styled.video`
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: #232a34;
-	/* filter: hue-rotate(0deg) ; */
 	transition: all 5s;
 	animation: ${caleido} 10s linear infinite;
 `;
@@ -50,7 +50,6 @@ export const PresentationContent = styled.div`
 	padding-left: 70px;
 	padding-right: 1rem;
 	z-index: 3;
-	max-width: 1200px;
 	position: absolute;
 	display: flex;
 	flex-direction: column;

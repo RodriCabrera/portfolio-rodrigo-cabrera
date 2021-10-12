@@ -50,14 +50,9 @@ export const CardBg = styled.img`
 	width: auto;
 	height: 100%;
 	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-	/* &:hover {
-		filter: saturate(100%) opacity(10%);
-	} */
 `;
 export const CardInfo = styled.div`
 	position: relative;
-	width: 250px;
 	height: 250px;
 	display: flex;
 	flex-direction: column;
@@ -75,6 +70,7 @@ export const CardDesc = styled.p`
 export const CardIcons = styled.div`
 	margin-top: auto;
 	font-size: 1.5rem;
+	color: rgb(63, 191, 191);
 `;
 export const VercelLink = styled(SiVercel)`
 	margin-right: 1rem;

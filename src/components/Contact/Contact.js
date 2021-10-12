@@ -12,7 +12,6 @@ import {
 } from "./Contact.elements";
 import emailjs from "emailjs-com";
 import Footer from "../Footer/Footer";
-
 const Contact = () => {
 	const form = useRef();
 	const [sent, setSent] = useState(false);
@@ -50,41 +49,43 @@ const Contact = () => {
 		}
 	};
 	return (
-		<ContactContainer id="contact">
-			<CWrapper>
-				<ContactHeader>CONTACT</ContactHeader>
-				<CForm ref={form} onSubmit={handleSubmit}>
-					{/* NAME */}
-					<CLabel htmlFor="user_name">Name</CLabel>
-					<CInput
-						type="text"
-						name="user_name"
-						id="user_name"
-						onChange={handleChange}
-						required
-					/>
-					{/* EMAIL */}
-					<CLabel htmlFor="user_email">Email</CLabel>
-					<CInput
-						type="text"
-						name="user_email"
-						id="user_email"
-						required
-						onSubmit={handleChange}
-					/>
-					{/* MESSAGE */}
-					<CTextarea rows="4" placeholder="Message" name="message" />
-					{!sent && <CSendBtn>Send</CSendBtn>}
-					{sent && <CNotification>Thank you! Message sent</CNotification>}
+		<>
+			<ContactContainer id="contact">
+				<CWrapper>
+					<ContactHeader>CONTACT</ContactHeader>
+					<CForm ref={form} onSubmit={handleSubmit}>
+						{/* NAME */}
+						<CLabel htmlFor="user_name">Name</CLabel>
+						<CInput
+							type="text"
+							name="user_name"
+							id="user_name"
+							onChange={handleChange}
+							required
+						/>
+						{/* EMAIL */}
+						<CLabel htmlFor="user_email">Email</CLabel>
+						<CInput
+							type="text"
+							name="user_email"
+							id="user_email"
+							required
+							onSubmit={handleChange}
+						/>
+						{/* MESSAGE */}
+						<CTextarea rows="4" placeholder="Message" name="message" />
+						{!sent && <CSendBtn>Send</CSendBtn>}
+						{sent && <CNotification>Thank you! Message sent</CNotification>}
 
-					{/* sent:loading
+						{/* sent:loading
 					false:false --> inicial *  btn activo / sin notif.
 					false:true  --> enviando * btn inactivo / sin notif.
 					true:false  --> enviado *  btn activo+form vacio / con notif. */}
-				</CForm>
-			</CWrapper>
-			<Footer />
-		</ContactContainer>
+					</CForm>
+				</CWrapper>
+				<Footer />
+			</ContactContainer>
+		</>
 	);
 };
 

@@ -10,16 +10,12 @@ import {
 } from "./Navbar.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
-import LangSwitch from "../LangSwitch/LangSwitch";
-import useData from "../../hooks/useData";
-import Sidebar from "../Sidebar/Sidebar";
 
 const Navbar = ({ toggle, isOpen }) => {
 	const toggleHome = () => {
 		scroll.scrollToTop();
 	};
 
-	const contents = useData("navbar");
 	return (
 		<>
 			<Nav>
@@ -39,7 +35,7 @@ const Navbar = ({ toggle, isOpen }) => {
 								spy={true}
 								exact="true"
 							>
-								{contents[0]}
+								About
 							</NavLinks>
 						</NavItem>
 						<NavItem>
@@ -50,7 +46,7 @@ const Navbar = ({ toggle, isOpen }) => {
 								spy={true}
 								exact="true"
 							>
-								{contents[1]}
+								Projects
 							</NavLinks>
 						</NavItem>
 						<NavItem>
@@ -61,14 +57,12 @@ const Navbar = ({ toggle, isOpen }) => {
 								spy={true}
 								exact="true"
 							>
-								{contents[2]}
+								Contact
 							</NavLinks>
 						</NavItem>
-						<LangSwitch />
 					</NavMenu>
 				</NavbarContainer>
 			</Nav>
-			<Sidebar toggle={toggle} isOpen={isOpen} />
 		</>
 	);
 };
