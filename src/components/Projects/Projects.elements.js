@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import { FaGithub } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
 export const ProjectsContainer = styled.div`
 	background-color: #dce1de;
 	min-height: 100vh;
@@ -39,13 +40,64 @@ export const ProjectsGrid = styled.div`
 		grid-template-columns: repeat(1, 300px);
 	}
 `;
+
+export const CardBg = styled.img`
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: 100%;
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	/* &:hover {
+		filter: saturate(100%) opacity(10%);
+	} */
+`;
+export const CardInfo = styled.div`
+	position: relative;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0%;
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+`;
+export const CardTitle = styled.h3`
+	font-family: "Major Mono Display", monospace;
+	margin-bottom: 2rem;
+`;
+export const CardDesc = styled.p`
+	text-align: center;
+`;
+export const CardIcons = styled.div`
+	margin-top: auto;
+	font-size: 1.5rem;
+`;
+export const VercelLink = styled(SiVercel)`
+	margin-right: 1rem;
+`;
+export const GithubLink = styled(FaGithub)``;
+export const StyledLink = styled.a`
+	color: inherit;
+	text-decoration: none;
+`;
 export const ProjectCard = styled.div`
+	position: relative;
 	padding: 1rem;
 	font-family: "Major Mono Display", monospace;
-	border: 1px solid black;
 	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-	&:hover {
-		background: darkgrey;
+
+	&:hover ${CardBg} {
+		filter: saturate(100%) opacity(10%);
+	}
+	&:hover ${CardInfo} {
+		opacity: 100%;
 	}
 `;

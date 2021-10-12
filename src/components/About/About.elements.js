@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-	padding: 7rem 3rem 5rem 3rem;
+	padding: 7rem 3rem 1rem 3rem;
 	min-height: 100vh;
 	background: #1f2421;
 	display: flex;
@@ -48,6 +48,7 @@ export const AboutImage = styled.img`
 export const SkillsList = styled.ul`
 	padding-left: 20px;
 	list-style: none;
+	margin-bottom: 2rem;
 `;
 export const Skill = styled.li`
 	&:before {

@@ -52,7 +52,7 @@ export const CSendBtn = styled.button`
 	cursor: pointer;
 	color: white;
 	font-size: 1rem;
-	background-color: darkolivegreen;
+	background-color: rgb(63, 191, 191);
 `;
 export const CNotification = styled.p`
 	color: lawngreen;

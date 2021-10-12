@@ -39,8 +39,33 @@ export const data = {
 	},
 	projects: {
 		lang: {
-			en: {},
-			sp: {},
+			en: {
+				header: "Projects",
+				cards: {
+					olaestudio: {
+						title: "Ola Studio",
+						description: "Website of a sound studio.",
+					},
+					artlatinamerica: {
+						title: "art latin amErica",
+						description: "Prototype of an online art gallery.",
+					},
+				},
+			},
+			sp: {
+				header: "Proyectos",
+				cards: {
+					olaestudio: {
+						title: "Ola Estudio",
+						description:
+							"Sitio de un estudio de sonido. Realizado principalmente React JS y Firebase. ",
+					},
+					artlatinamerica: {
+						title: "art latin amErica",
+						description: "Prototipo para una gallería de arte online.",
+					},
+				},
+			},
 		},
 	},
 	contact: {
