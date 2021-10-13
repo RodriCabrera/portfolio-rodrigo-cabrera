@@ -50,6 +50,9 @@ export const CardBg = styled.img`
 	width: auto;
 	height: 100%;
 	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	@media screen and (max-width: 700px) {
+		filter: blur(2px) saturate(30%) opacity(30%);
+	} ;
 `;
 export const CardInfo = styled.div`
 	position: relative;
@@ -59,10 +62,16 @@ export const CardInfo = styled.div`
 	align-items: center;
 	opacity: 0%;
 	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	@media screen and (max-width: 700px) {
+		opacity: 100%;
+	} ;
 `;
 export const CardTitle = styled.h3`
 	font-family: "Major Mono Display", monospace;
 	margin-bottom: 2rem;
+	@media screen and (max-width: 700px) {
+		opacity: 100%;
+	} ;
 `;
 export const CardDesc = styled.p`
 	text-align: center;
@@ -91,7 +100,7 @@ export const ProjectCard = styled.div`
 	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 	&:hover ${CardBg} {
-		filter: saturate(100%) opacity(10%);
+		filter: blur(1px) saturate(30%) opacity(20%);
 	}
 	&:hover ${CardInfo} {
 		opacity: 100%;

@@ -107,8 +107,8 @@ const Projects = () => {
 						}
 					/>
 					<CardInfo>
-						<CardTitle>Project 4</CardTitle>
-						<CardDesc>Insert Project 3 Info.</CardDesc>
+						<CardTitle>Under construction</CardTitle>
+						<CardDesc></CardDesc>
 						<CardIcons>
 							<StyledLink
 								href="https://artlatinamerica.vercel.app/sdsdsd"
