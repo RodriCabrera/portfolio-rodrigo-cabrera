@@ -20,9 +20,7 @@ const Navbar = ({ toggle, isOpen }) => {
 		<>
 			<Nav>
 				<NavbarContainer>
-					<NavLogo to="#" onClick={toggleHome}>
-						RodriGo CabrerA
-					</NavLogo>
+					<NavLogo onClick={toggleHome}>RodriGo CabrerA</NavLogo>
 					<MobileIcon onClick={toggle}>
 						{isOpen ? <FaTimes /> : <FaBars />}
 					</MobileIcon>
