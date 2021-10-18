@@ -79,7 +79,11 @@ export const CardDesc = styled.p`
 export const CardIcons = styled.div`
 	margin-top: auto;
 	font-size: 1.5rem;
-	color: rgb(63, 191, 191);
+	color: rgb(0, 123, 123);
+	transition: 0.5s all ease-in;
+	&:hover {
+		color: rgb(0, 255, 255);
+	}
 `;
 export const VercelLink = styled(SiVercel)`
 	margin-right: 1rem;

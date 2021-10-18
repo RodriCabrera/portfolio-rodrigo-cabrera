@@ -52,9 +52,18 @@ export const CSendBtn = styled.button`
 	cursor: pointer;
 	color: white;
 	font-size: 1rem;
-	background-color: rgb(63, 191, 191);
+	border: 1px solid rgb(63, 191, 191);
+	color: rgb(63, 191, 191);
+	background-color: rgba(63, 191, 191, 0);
+	transition: 0.3s all ease-in-out;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+	&:hover {
+		background-color: rgba(63, 191, 191, 0);
+		background: #29302c;
+	}
 `;
 export const CNotification = styled.p`
-	color: lawngreen;
+	color: white;
+	margin-top: 1rem;
 	text-align: center;
 `;

@@ -14,6 +14,7 @@ import {
 	StyledLink,
 } from "./Projects.elements";
 import olaestudio from "../../assets/olaestudio-min-square.jpg";
+import simpsons from "../../assets/simpsons-square.png";
 
 const Projects = () => {
 	return (
@@ -101,24 +102,20 @@ const Projects = () => {
 					</CardInfo>
 				</ProjectCard>
 				<ProjectCard>
-					<CardBg
-						src={
-							"https://www.bellasartes.gob.ar/media/uploads/coleccion/7182.jpg"
-						}
-					/>
+					<CardBg src={simpsons} />
 					<CardInfo>
-						<CardTitle>Under construction</CardTitle>
+						<CardTitle>The Simpsons Quotes QuiZZ</CardTitle>
 						<CardDesc></CardDesc>
 						<CardIcons>
 							<StyledLink
-								href="https://artlatinamerica.vercel.app/sdsdsd"
+								href="https://the-simpsons-quotes-quizz.vercel.app/"
 								target="_blank"
 								rel="noreferrer"
 							>
 								<VercelLink />
 							</StyledLink>
 							<StyledLink
-								href="https://github.com/RodriCabrera/"
+								href="https://github.com/RodriCabrera/the-simpsons-quotes-quizz"
 								target="_blank"
 								rel="noreferrer"
 							>

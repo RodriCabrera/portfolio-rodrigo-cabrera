@@ -7,18 +7,23 @@ import {
 	ContactHeader,
 	CTextarea,
 	CWrapper,
-	CSendBtn,
-	CNotification,
+	// CSendBtn,
+	// CNotification,
 } from "./Contact.elements";
 import emailjs from "emailjs-com";
 import Footer from "../Footer/Footer";
+import ContactNotifications from "./Subcomponents/ContactNotifications";
 const Contact = () => {
 	const form = useRef();
 	const [sent, setSent] = useState(false);
 	const [loading, setLoading] = useState(false);
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	console.log(loading, name, email);
+
+	const [formState, setFormState] = useState({
+		userName: "",
+		userEmail: "",
+		message: "",
+	});
+
 	const handleSubmit = (e) => {
 		setLoading(true);
 		e.preventDefault();
@@ -32,22 +37,31 @@ const Contact = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
-					setSent(true);
 				},
 				(error) => {
 					console.log(error.text);
 				}
-			);
+			)
+			.finally(() => {
+				setSent(true);
+				setLoading(false);
+				clearForm();
+			});
 	};
-	const handleChange = (e) => {
-		if (e.target.name === "user_name") {
-			console.log("tipeando en nombre");
-			setName(e.target.value);
-		} else if (e.target.name === "user_email") {
-			console.log("tipeando en email");
-			setEmail(e.target.value);
-		}
+	const onInputChange = (e) => {
+		setFormState((prevState) => ({
+			...prevState,
+			[e.target.name]: e.target.value,
+		}));
 	};
+	function clearForm() {
+		setFormState({
+			userName: "",
+			userEmail: "",
+			userPhone: "",
+			message: "",
+		});
+	}
 	return (
 		<>
 			<ContactContainer id="contact">
@@ -58,29 +72,29 @@ const Contact = () => {
 						<CLabel htmlFor="user_name">Name</CLabel>
 						<CInput
 							type="text"
-							name="user_name"
-							id="user_name"
-							onChange={handleChange}
+							name="userName"
+							onChange={onInputChange}
 							required
+							value={formState.userName}
 						/>
 						{/* EMAIL */}
 						<CLabel htmlFor="user_email">Email</CLabel>
 						<CInput
 							type="text"
-							name="user_email"
-							id="user_email"
+							name="userEmail"
 							required
-							onSubmit={handleChange}
+							onChange={onInputChange}
+							value={formState.userEmail}
 						/>
 						{/* MESSAGE */}
-						<CTextarea rows="4" placeholder="Message" name="message" />
-						{!sent && <CSendBtn>Send</CSendBtn>}
-						{sent && <CNotification>Thank you! Message sent</CNotification>}
-
-						{/* sent:loading
-					false:false --> inicial *  btn activo / sin notif.
-					false:true  --> enviando * btn inactivo / sin notif.
-					true:false  --> enviado *  btn activo+form vacio / con notif. */}
+						<CTextarea
+							rows="4"
+							placeholder="Message"
+							name="message"
+							value={formState.message}
+							onChange={onInputChange}
+						/>
+						<ContactNotifications sent={sent} loading={loading} />
 					</CForm>
 				</CWrapper>
 				<Footer />
