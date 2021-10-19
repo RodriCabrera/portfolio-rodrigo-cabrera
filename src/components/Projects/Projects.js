@@ -105,7 +105,12 @@ const Projects = () => {
 					<CardBg src={simpsons} />
 					<CardInfo>
 						<CardTitle>The Simpsons Quotes QuiZZ</CardTitle>
-						<CardDesc></CardDesc>
+						<CardDesc>
+							Who said...? Quotes, characters and images fetched from{" "}
+							<a href="https://thesimpsonsquoteapi.glitch.me/">
+								The Simpsons Quote API
+							</a>
+						</CardDesc>
 						<CardIcons>
 							<StyledLink
 								href="https://the-simpsons-quotes-quizz.vercel.app/"

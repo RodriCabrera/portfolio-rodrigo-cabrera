@@ -68,6 +68,7 @@ export const CardInfo = styled.div`
 `;
 export const CardTitle = styled.h3`
 	font-family: "Major Mono Display", monospace;
+	text-align: center;
 	margin-bottom: 2rem;
 	@media screen and (max-width: 700px) {
 		opacity: 100%;
