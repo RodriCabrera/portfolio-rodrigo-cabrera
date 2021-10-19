@@ -41,7 +41,8 @@ const About = () => {
 						<SkillsList>
 							<Skill>React JS</Skill>
 							<Skill>Styled Components</Skill>
-							<Skill>CSS</Skill>
+							<Skill>CSS / SASS</Skill>
+							<Skill>Javascript</Skill>
 							<Skill>Git</Skill>
 							<Skill>Firebase</Skill>
 						</SkillsList>
