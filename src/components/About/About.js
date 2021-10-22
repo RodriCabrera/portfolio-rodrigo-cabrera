@@ -23,7 +23,7 @@ const About = () => {
 							Hello! I'm glad you're here! My name is Rodrigo, I'm a freelance
 							frontend developer based in Buenos Aires. I finished Coderhouse's
 							Frontend bootcamp and I'm currently studying backend development
-							(Node JS) and QA Testing.
+							(Node JS).
 						</AboutText>
 						<AboutText>
 							Apart from coding, I'm a yoga instructor and I'm halfway from
