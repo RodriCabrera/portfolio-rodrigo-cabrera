@@ -13,7 +13,7 @@ const Footer = () => {
 			<FooterContainer>
 				<FWrapper>
 					<FIconsList>
-						<IconLink href="https://www.linkedin.com/feed/">
+						<IconLink href="https://www.linkedin.com/in/rodrigo-cabrera/">
 							<LinkedinIcon />
 						</IconLink>
 						<IconLink href="https://github.com/RodriCabrera">
