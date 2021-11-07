@@ -7,10 +7,11 @@ import {
 	NavMenu,
 	NavItem,
 	NavLinks,
+	CVLink,
 } from "./Navbar.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
-
+import CV from "../../assets/CV.pdf";
 const Navbar = ({ toggle, isOpen }) => {
 	const toggleHome = () => {
 		scroll.scrollToTop();
@@ -46,6 +47,11 @@ const Navbar = ({ toggle, isOpen }) => {
 							>
 								Projects
 							</NavLinks>
+						</NavItem>
+						<NavItem>
+							<CVLink href={CV} download="CV_Rodrigo_Cabrera">
+								CV
+							</CVLink>
 						</NavItem>
 						<NavItem>
 							<NavLinks

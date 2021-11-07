@@ -91,3 +91,17 @@ export const NavLinks = styled(LinkS)`
 		border-bottom: 1px solid #fff;
 	}
 `;
+export const CVLink = styled.a`
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	&:hover {
+		text-shadow: 0px 0px 6px rgba(63, 191, 191, 0.7),
+			1px 1px 10px rgba(63, 191, 191, 0.7);
+	}
+`;
