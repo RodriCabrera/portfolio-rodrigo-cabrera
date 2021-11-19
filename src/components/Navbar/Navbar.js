@@ -48,11 +48,11 @@ const Navbar = ({ toggle, isOpen }) => {
 								Projects
 							</NavLinks>
 						</NavItem>
-						{/* <NavItem>
+						<NavItem>
 							<CVLink href={CV} download="CV_Rodrigo_Cabrera">
 								CV
 							</CVLink>
-						</NavItem> */}
+						</NavItem>
 						<NavItem>
 							<NavLinks
 								to="contact"
