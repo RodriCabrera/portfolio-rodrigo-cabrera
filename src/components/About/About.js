@@ -26,9 +26,8 @@ const About = () => {
 							(Node JS).
 						</AboutText>
 						<AboutText>
-							Apart from coding, I'm a yoga instructor and I'm halfway from
-							finishing my psychology degree thesis about meditation and gestalt
-							therapy.
+							Apart from coding, I'm a hobbyist musician and I recently finished
+							my psychology degree thesis about meditation and Gestalt Therapy.
 						</AboutText>
 						<AboutText>
 							I'm currently looking to face new challenges and learn from the
