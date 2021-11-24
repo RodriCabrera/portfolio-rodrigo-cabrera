@@ -1,164 +1,64 @@
 import React from "react";
 import {
-	ProjectCard,
 	ProjectsContainer,
 	ProjectsGrid,
 	ProjectsHeader,
-	CardBg,
-	CardInfo,
-	CardTitle,
-	CardDesc,
-	CardIcons,
-	VercelLink,
-	GithubLink,
-	StyledLink,
 } from "./Projects.elements";
 import olaestudio from "../../assets/olaestudio-min-square.jpg";
 import simpsons from "../../assets/simpsons-square.png";
+import Card from "./Card";
 
 const Projects = () => {
 	return (
 		<ProjectsContainer id="projects">
 			<ProjectsHeader>proJects</ProjectsHeader>
 			<ProjectsGrid>
-				<ProjectCard>
-					<CardBg src={olaestudio} />
-					<CardInfo>
-						<CardTitle>oLa STUdIo</CardTitle>
-						<CardDesc>Website of a sound studio.</CardDesc>
-						<CardIcons>
-							<StyledLink
-								href="https://olaestudio.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<VercelLink />
-							</StyledLink>
-							<StyledLink
-								href="https://github.com/RodriCabrera/olaestudio"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<GithubLink />
-							</StyledLink>
-						</CardIcons>
-					</CardInfo>
-				</ProjectCard>
-				<ProjectCard>
-					<CardBg
-						src={
-							"https://www.bellasartes.gob.ar/media/uploads/coleccion/7183.jpg"
-						}
-					/>
-					<CardInfo>
-						<CardTitle>ArT LaTin aMeRica</CardTitle>
-						<CardDesc>Prototype of an online art gallery.</CardDesc>
-						<CardIcons>
-							<StyledLink
-								href="https://artlatinamerica.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<VercelLink />
-							</StyledLink>
-							<StyledLink
-								href="https://github.com/RodriCabrera/gallery"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<GithubLink />
-							</StyledLink>
-						</CardIcons>
-					</CardInfo>
-				</ProjectCard>
-				<ProjectCard>
-					<CardBg
-						src={
-							"https://p4.wallpaperbetter.com/wallpaper/13/361/145/dc-comics-gotham-city-metropolis-justice-league-hd-wallpaper-preview.jpg"
-						}
-					/>
-					<CardInfo>
-						<CardTitle>SuperHero Team</CardTitle>
-						<CardDesc>
-							Select superheroes and villains to form a team. The data comes
-							from Superhero-API.
-						</CardDesc>
-						<CardIcons>
-							<StyledLink
-								href="https://superhero-team.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<VercelLink />
-							</StyledLink>
-							<StyledLink
-								href="https://github.com/RodriCabrera/superhero-team-alkemy"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<GithubLink />
-							</StyledLink>
-						</CardIcons>
-					</CardInfo>
-				</ProjectCard>
-				<ProjectCard>
-					<CardBg
-						src={
-							"https://www.cultura.gob.ar/media/uploads/espantapajaros-girondo-ok.jpg"
-						}
-					/>
-					<CardInfo>
-						<CardTitle>EspantaPajarOS 10</CardTitle>
-						<CardDesc>
-							Web App version of the first 10 poems of Girondo's
-							"Espantapájaros"
-						</CardDesc>
-						<CardIcons>
-							<StyledLink
-								href="https://espantapajaros.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<VercelLink />
-							</StyledLink>
-							<StyledLink
-								href="https://github.com/RodriCabrera/espantapajaros"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<GithubLink />
-							</StyledLink>
-						</CardIcons>
-					</CardInfo>
-				</ProjectCard>
-				<ProjectCard>
-					<CardBg src={simpsons} />
-					<CardInfo>
-						<CardTitle>The Simpsons Quotes QuiZZ</CardTitle>
-						<CardDesc>
-							Who said...? Quotes, characters and images fetched from{" "}
-							<a href="https://thesimpsonsquoteapi.glitch.me/">
-								The Simpsons Quote API
-							</a>
-						</CardDesc>
-						<CardIcons>
-							<StyledLink
-								href="https://the-simpsons-quotes-quizz.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<VercelLink />
-							</StyledLink>
-							<StyledLink
-								href="https://github.com/RodriCabrera/the-simpsons-quotes-quizz"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<GithubLink />
-							</StyledLink>
-						</CardIcons>
-					</CardInfo>
-				</ProjectCard>
+				<Card
+					bg={olaestudio}
+					title={"oLa STUdIo"}
+					desc={"Website of a sound studio."}
+					vercel={"https://olaestudio.vercel.app/"}
+					github={"https://github.com/RodriCabrera/olaestudio"}
+				/>
+				<Card
+					bg={"https://www.bellasartes.gob.ar/media/uploads/coleccion/7183.jpg"}
+					title={"ArT LaTin aMeRica"}
+					desc={"Prototype of an online art gallery."}
+					vercel={"https://artlatinamerica.vercel.app/"}
+					github={"https://github.com/RodriCabrera/gallery"}
+				/>
+				<Card
+					bg={
+						"https://p4.wallpaperbetter.com/wallpaper/13/361/145/dc-comics-gotham-city-metropolis-justice-league-hd-wallpaper-preview.jpg"
+					}
+					title={"superheRo Team"}
+					desc={
+						"Select superheroes and villains to form a team. The data comes from Superhero-API."
+					}
+					vercel={"https://superhero-team.vercel.app/"}
+					github={"https://github.com/RodriCabrera/superhero-team-alkemy"}
+				/>
+
+				<Card
+					bg={
+						"https://www.cultura.gob.ar/media/uploads/espantapajaros-girondo-ok.jpg"
+					}
+					title={"EspantaPajarOS 10"}
+					desc={
+						"Web App version of the first 10 poems of Girondo's 'Espantapájaros'"
+					}
+					vercel={"https://espantapajaros.vercel.app/"}
+					github={"https://github.com/RodriCabrera/espantapajaros"}
+				/>
+				<Card
+					bg={simpsons}
+					title={"The Simpsons Quotes QuiZZ"}
+					desc={
+						"Who said...? Quotes, characters and images fetched from The Simpsons Quote API"
+					}
+					vercel={"https://the-simpsons-quotes-quizz.vercel.app/"}
+					github={"https://github.com/RodriCabrera/the-simpsons-quotes-quizz"}
+				/>
 			</ProjectsGrid>
 		</ProjectsContainer>
 	);
