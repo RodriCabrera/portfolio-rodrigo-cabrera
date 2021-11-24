@@ -74,6 +74,36 @@ const Projects = () => {
 				<ProjectCard>
 					<CardBg
 						src={
+							"https://p4.wallpaperbetter.com/wallpaper/13/361/145/dc-comics-gotham-city-metropolis-justice-league-hd-wallpaper-preview.jpg"
+						}
+					/>
+					<CardInfo>
+						<CardTitle>SuperHero Team</CardTitle>
+						<CardDesc>
+							Select superheroes and villains to form a team. The data comes
+							from Superhero-API.
+						</CardDesc>
+						<CardIcons>
+							<StyledLink
+								href="https://superhero-team.vercel.app/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<VercelLink />
+							</StyledLink>
+							<StyledLink
+								href="https://github.com/RodriCabrera/superhero-team-alkemy"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<GithubLink />
+							</StyledLink>
+						</CardIcons>
+					</CardInfo>
+				</ProjectCard>
+				<ProjectCard>
+					<CardBg
+						src={
 							"https://www.cultura.gob.ar/media/uploads/espantapajaros-girondo-ok.jpg"
 						}
 					/>
