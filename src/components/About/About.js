@@ -20,10 +20,10 @@ const About = () => {
         <AboutInner>
           <AboutTextContainer>
             <AboutText>
-              Hello! I'm glad you're here! My name is Rodrigo, I'm a freelance
-              frontend developer based in Buenos Aires. I finished Coderhouse's
-              Frontend bootcamp and I'm currently studying mobile development
-              (React Native).
+              Hello! I'm glad you're here! My name is Rodrigo, I'm a frontend
+              developer based in Buenos Aires. I finished Coderhouse's Frontend
+              bootcamp and I'm currently studying mobile development (React
+              Native).
             </AboutText>
             <AboutText>Apart from coding, I'm a psychologist.</AboutText>
             <AboutText>
