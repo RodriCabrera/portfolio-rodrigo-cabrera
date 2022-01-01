@@ -13,13 +13,11 @@ import LangSwitch from "../LangSwitch/LangSwitch";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import CV from "../../assets/CV.pdf";
-import { useLanguage } from "../../context/LanguageContext";
 const Navbar = ({ toggle, isOpen }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-  const { language, setLanguage } = useLanguage();
-  console.log(language);
+
   return (
     <>
       <Nav>
