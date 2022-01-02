@@ -12,25 +12,27 @@ import {
   AboutWrapper,
 } from "./About.elements";
 import photo from "../../assets/photo.png";
+import { FormattedMessage } from "react-intl";
 const About = () => {
   return (
     <AboutContainer id="about">
       <AboutWrapper>
-        <AboutHeader>About me</AboutHeader>
+        <AboutHeader>
+          <FormattedMessage id="about-header" />
+        </AboutHeader>
         <AboutInner>
           <AboutTextContainer>
             <AboutText>
-              Hello! I'm glad you're here! My name is Rodrigo, I'm a frontend
-              developer based in Buenos Aires. I finished Coderhouse's Frontend
-              bootcamp and I'm currently studying mobile development (React
-              Native).
-            </AboutText>
-            <AboutText>Apart from coding, I'm a psychologist.</AboutText>
-            <AboutText>
-              I'm currently a React Developer at LoopStudio (from Uruguay).
+              <FormattedMessage id="about-text1" />
             </AboutText>
             <AboutText>
-              These are the main thechnologies I'm working with:
+              <FormattedMessage id="about-text2" />
+            </AboutText>
+            <AboutText>
+              <FormattedMessage id="about-text3" />
+            </AboutText>
+            <AboutText>
+              <FormattedMessage id="about-tech" />
             </AboutText>
             <SkillsList>
               <Skill>React JS</Skill>

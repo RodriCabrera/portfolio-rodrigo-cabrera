@@ -1,4 +1,5 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import {
   ProjectCard,
   CardInfo,
@@ -16,8 +17,12 @@ const Card = ({ bg, title, desc, deploy, github }) => {
     <ProjectCard>
       <CardBg src={bg} />
       <CardInfo>
-        <CardTitle>{title}</CardTitle>
-        <CardDesc>{desc}</CardDesc>
+        <CardTitle>
+          <FormattedMessage id={title} />
+        </CardTitle>
+        <CardDesc>
+          <FormattedMessage id={desc} />
+        </CardDesc>
         <CardIcons>
           <StyledLink href={deploy} target="_blank" rel="noreferrer">
             <ExternalLink />

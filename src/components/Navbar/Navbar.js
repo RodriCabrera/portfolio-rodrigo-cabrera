@@ -13,6 +13,7 @@ import LangSwitch from "../LangSwitch/LangSwitch";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import CV from "../../assets/CV.pdf";
+import { FormattedMessage } from "react-intl";
 const Navbar = ({ toggle, isOpen }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -40,7 +41,7 @@ const Navbar = ({ toggle, isOpen }) => {
                 spy={true}
                 exact="true"
               >
-                About
+                <FormattedMessage id="nav-about" />
               </NavLinks>
             </NavItem>
             <NavItem>
@@ -51,7 +52,7 @@ const Navbar = ({ toggle, isOpen }) => {
                 spy={true}
                 exact="true"
               >
-                proJects
+                <FormattedMessage id="nav-projects" />
               </NavLinks>
             </NavItem>
 
@@ -63,7 +64,7 @@ const Navbar = ({ toggle, isOpen }) => {
                 spy={true}
                 exact="true"
               >
-                Contact
+                <FormattedMessage id="nav-contact" />
               </NavLinks>
             </NavItem>
             <NavItem>

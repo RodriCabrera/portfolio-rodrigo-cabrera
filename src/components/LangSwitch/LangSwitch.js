@@ -5,7 +5,7 @@ import "./LangSwitch.css";
 const LangSwitch = () => {
   const { setLanguage, language } = useLanguage();
   const handleSwitch = () => {
-    language === "en" ? setLanguage("sp") : setLanguage("en");
+    language === "en" ? setLanguage("es") : setLanguage("en");
   };
   return (
     <>
@@ -15,7 +15,7 @@ const LangSwitch = () => {
         </div>
         <span>/</span>
         <div className="btn-container">
-          <p className={`btn ${language === "sp" && "active"}`}>sp</p>
+          <p className={`btn ${language === "es" && "active"}`}>sp</p>
         </div>
       </div>
     </>
