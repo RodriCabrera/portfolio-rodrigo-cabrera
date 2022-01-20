@@ -14,6 +14,7 @@ import emailjs from "emailjs-com";
 import Footer from "../Footer/Footer";
 import ContactNotifications from "./Subcomponents/ContactNotifications";
 import { FormattedMessage } from "react-intl";
+import { Fade } from "react-reveal";
 const Contact = () => {
   const form = useRef();
   const [sent, setSent] = useState(false);
@@ -64,9 +65,9 @@ const Contact = () => {
     });
   }
   return (
-    <>
-      <ContactContainer id="contact">
-        <CWrapper>
+    <ContactContainer id="contact">
+      <CWrapper>
+        <Fade bottom>
           <ContactHeader>
             <FormattedMessage id="contact-header" />
           </ContactHeader>
@@ -103,10 +104,10 @@ const Contact = () => {
             />
             <ContactNotifications sent={sent} loading={loading} />
           </CForm>
-        </CWrapper>
-        <Footer />
-      </ContactContainer>
-    </>
+        </Fade>
+      </CWrapper>
+      <Footer />
+    </ContactContainer>
   );
 };
 

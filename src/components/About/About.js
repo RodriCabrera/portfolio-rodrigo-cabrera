@@ -13,13 +13,17 @@ import {
 } from "./About.elements";
 import photo from "../../assets/photo.png";
 import { FormattedMessage } from "react-intl";
+import { Fade } from "react-reveal";
+
 const About = () => {
   return (
     <AboutContainer id="about">
       <AboutWrapper>
-        <AboutHeader>
-          <FormattedMessage id="about-header" />
-        </AboutHeader>
+        <Fade>
+          <AboutHeader>
+            <FormattedMessage id="about-header" />
+          </AboutHeader>
+        </Fade>
         <AboutInner>
           <AboutTextContainer>
             <AboutText>
@@ -48,7 +52,9 @@ const About = () => {
             </SkillsList>
           </AboutTextContainer>
           <AboutImageWrapper>
-            <AboutImage src={photo} />
+            <Fade>
+              <AboutImage src={photo} />
+            </Fade>
           </AboutImageWrapper>
         </AboutInner>
       </AboutWrapper>

@@ -8,13 +8,17 @@ import olaestudio from "../../assets/olaestudio-min-square.jpg";
 import simpsons from "../../assets/simpsons-square.png";
 import Card from "./Card";
 import { FormattedMessage } from "react-intl";
+import { Fade } from "react-reveal";
 
 const Projects = () => {
   return (
     <ProjectsContainer id="projects">
-      <ProjectsHeader>
-        <FormattedMessage id="projects-header" />
-      </ProjectsHeader>
+      <Fade>
+        <ProjectsHeader>
+          <FormattedMessage id="projects-header" />
+        </ProjectsHeader>
+      </Fade>
+
       <ProjectsGrid>
         <Card
           bg={olaestudio}
