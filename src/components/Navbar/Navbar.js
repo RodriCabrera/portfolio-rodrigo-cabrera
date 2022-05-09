@@ -29,11 +29,6 @@ const Navbar = ({ toggle, isOpen }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <CVLink href={CV} download="CV_Rodrigo_Cabrera">
-                cv
-              </CVLink>
-            </NavItem>
-            <NavItem>
               <NavLinks
                 to="about"
                 smooth={true}
